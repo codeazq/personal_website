@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+@font-face {
+  font-display: swap;
+  font-family: Metropolis;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Metropolis/Metropolis-Medium.woff2") format("woff2"),
+    url("../fonts/Metropolis/Metropolis-Medium.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Metropolis;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Metropolis/Metropolis-Bold.woff2") format("woff2"),
+    url("../fonts/Metropolis/Metropolis-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ZillaSlab/ZillaSlab-Regular.woff2") format("woff2"),
+    url("../fonts/ZillaSlab/ZillaSlab-Regular.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ZillaSlab/ZillaSlab-Bold.woff2") format("woff2"),
+    url("../fonts/ZillaSlab/ZillaSlab-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Inter/Inter-Regular.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-Regular.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Inter/Inter-Bold.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-Bold.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/Inter/Inter-Italic.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-Italic.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/Inter/Inter-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-BoldItalic.woff") format("woff");
+}
+
+/* try this color for navbar #224464 */
+:root {
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* -webkit-font-smoothing: antialiased;
+  color: #000; */
+  font-family: Inter, sans-serif;
+  /* font-family: "Lato", sans-serif; */
+  color: #333;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Zilla Slab, sans-serif;
+  font-weight: 700;
+  /* font-weight: 300; */
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+img {
+  width: 100%;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 70px;
+  border-width: 0px 0px 1px 0px;
+  border-color: rgba(232, 232, 232, 1);
+  border-style: solid;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  border-bottom: 2px #fff solid;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.hero {
+  min-height: 500px;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-block: 20px 50px;
+}
+
+.hero-text {
+  animation: slideInFromLeft 1s ease-in;
+}
+
+.hero-image {
+  animation: slideInFromRight 1s ease-in;
+}
+
+.hero h1 {
+  font-size: 4.75rem;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 1.75rem;
+}
+
+.hero .socials a {
+  margin: 0 10px;
+}
+
+.hero .grid {
+  overflow: visible;
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -80px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  transform: skewY(-4deg);
+  -webkit-transform: skewY(-4deg);
+  -moz-transform: skewY(-4deg);
+  -ms-transform: skewY(-4deg);
+}
+
+.portfolio {
+  background-color: #fff;
+  padding-top: 100px;
+}
+
+.portfolio .flex > * {
+  flex-basis: 100%;
+}
+
+.portfolio .grid {
+  overflow: visible;
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+}
+
+.portfolio-item {
+  padding-block: 15px;
+}
+
+.portfolio-section-heading {
+  font-size: 3.4rem;
+}
+
+/* Cloud */
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+
+.blog-section {
+  padding: 4rem 0;
+  /* background-color: var(--secondary-color); */
+}
+
+@media (min-width: 40em) {
+  .blog-section {
+    padding: 2rem 7rem;
+    /* background-color: var(--secondary-color); */
+  }
+}
+
+footer {
+  padding: 3rem 0;
+}
+
+/* Footer */
+.footer .socials a {
+  margin: 0 10px;
+}
+
+@media (min-width: 40em) {
+  footer {
+    padding: 2rem 5rem;
+  }
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromButtom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .grid,
+  .hero .grid,
+  .portfolio .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .hero-text {
+    text-align: center;
+    animation: slideInFromTop 1s ease-in;
+  }
+
+  .hero-image {
+    justify-self: center;
+    margin: auto;
+    animation: slideInFromButtom 1s ease-in;
+  }
+
+  .portfolio-item .flex {
+    flex-direction: column;
+  }
+
+  .portfolio-image {
+    justify-self: center;
+    margin: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .navbar {
+    height: 110px;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .navbar ul {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .portfolio-section-heading {
+    font-size: 2.4rem;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+}
