@@ -73,6 +73,7 @@
   --secondary-color: #1c3fa8;
   --dark-color: #002240;
   --light-color: #f4f4f4;
+  --gradiant: linear-gradient(to right, #8360c3, #2ebf91);
 }
 
 * {
