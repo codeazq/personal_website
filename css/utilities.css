@@ -86,7 +86,8 @@
 
 .btn-outline {
   background-color: transparent;
-  border: 1px #fff solid;
+  border: 1px #000 solid;
+  color: #000;
 }
 
 .btn:hover {
@@ -95,8 +96,8 @@
 
 .bg-primary,
 .btn-primary {
-  background-image: var(--gradiant);
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .bg-secondary,
